@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int count=0;
+        while(n!=0){
+            int d = n%10;
+            if(d%2!=0){
+                count=1;
+                break;
+            }
+        n/=10;
+        }
+        if(count ==0){
+            System.out.println(" All the digit are even");
+        }
+        else{
+            System.out.println(" All the digits are not the even");
+        }
+        
+}
+}
