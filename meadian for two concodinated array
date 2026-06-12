@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int [] arr1 = new int[n];
+        int [] arr2 = new int[n];
+        int [] arr3 = new int[n+n];
+        for(int i=0;i<n;i++){
+            arr1[i]=sc.nextInt();
+        }
+        for(int i=0;i<n;i++){
+             arr2[i]=sc.nextInt();
+        }
+        int k =0;
+            for(int i=0;i<n;i++){
+            arr3[k]= arr1[i]; 
+            k++;
+            }
+        
+            for(int i=0;i<n;i++){
+                 arr3[k]= arr2[i];
+                 k++;
+             }
+        
+             int median = 0;
+             int median2 =0;
+             int le = arr3.length;
+             if(le %2==0){
+                 median = arr3[le/2];
+                 median2 = arr3[(le/2)+1];
+                 System.out.println(arr3[median-1]+ " " + "" + arr3[median2-1]);
+             }
+             else{
+                 median= arr3[le/2];
+                 System.out.println(arr3[median-1]);
+             }
+    }
+}
