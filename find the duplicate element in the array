@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int [] arr = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]= sc.nextInt();
+        }
+        
+        for(int i=0;i<n;i++){
+            boolean b = false;
+            for(int j=0;j<i;j++){
+                if(arr[i]==arr[j]){
+                    b=true;
+                }
+                
+               }
+               if(b==false){
+                    System.out.println(arr[i]+" ");
+            }
+        }
+    }
+}
